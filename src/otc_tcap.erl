@@ -319,7 +319,7 @@ parse_invoke_id({absent, 'NULL'}) ->
 compose_invoke_id(I) when is_integer(I) ->
     {present, I};
 compose_invoke_id(absent) ->
-    {absent, 'NULL'}.
+    absent.
 
 remove_undefined_fields([], Map) ->
     Map;
