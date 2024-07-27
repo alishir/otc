@@ -86,10 +86,7 @@ ROS ::= CHOICE
 Invoke ::= SEQUENCE
 {
    invokeId InvokeId,
-   linkedId CHOICE {
-                     present [0] IMPLICIT present < InvokeId,
-                     absent  [1] IMPLICIT NULL
-                   } OPTIONAL,
+
    opcode Code,
    argument ANY DEFINED BY opcode OPTIONAL
 }
